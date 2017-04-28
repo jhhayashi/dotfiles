@@ -1,3 +1,5 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 if ! [ `which brew` ]
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -20,24 +22,10 @@ cd YouCompleteMe && git submodule update --init --recursive && ./install.py --cl
 
 # https://github.com/metakirby5/codi.vim
 cd ~/.vim/bundle && git clone https://github.com/metakirby5/codi.vim.git
-# if [[ $* == *--update-rc* ]]
-# then
-#   cat >> ~/.bash_profile << EOL
-#   # Codi
-#   # Usage: codi [filetype] [filename]
-#   codi() {
-#     local syntax="${1:-python}"
-#     shift
-#     vim -c \
-#       "let g:startify_disable_at_vimenter = 1 |\
-#       set bt=nofile ls=0 noru nonu nornu |\
-#       hi ColorColumn ctermbg=NONE |\
-#       hi VertSplit ctermbg=NONE |\
-#       hi NonText ctermfg=0 |\
-#       Codi $syntax" "$@"
-#   }
-#   EOL
-# fi
+if [[ $* == *--update-rc* ]]
+then
+  cat $DIR/.codi >> ~/.bash_profile
+fi
 
 # https://github.com/pangloss/vim-javascript
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
