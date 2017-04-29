@@ -4,6 +4,10 @@ pw () {
   unset $REPLY
 }
 
+function cd {
+  builtin cd "$@" && ls -Gp
+}
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -53,3 +57,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # PATH
 export PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
+
+# external conf
+if [ -f ~/.kensho_bash_conf ]
+then
+  source ~/.kensho_bash_conf
+fi
