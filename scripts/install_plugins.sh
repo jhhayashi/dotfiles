@@ -65,3 +65,6 @@ git clone https://github.com/jshint/jshint
 # https://github.com/christoomey/vim-tmux-navigator
 cd ~/.vim/bundle
 git clone https://github.com/christoomey/vim-tmux-navigator
+
+cd ~/.vim/bundle
+git clone git://github.com/digitaltoad/vim-pug.git

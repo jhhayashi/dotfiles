@@ -436,3 +436,6 @@ let g:flow#errjmp = 1
 " https://github.com/JamshedVesuna/vim-markdown-preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
+
+" my computer has no esc key
+:imap jk <Esc>

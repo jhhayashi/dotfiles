@@ -9,6 +9,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "set -g @plugin 'tmux-plugins/tpm'" >> ~/.tmux.conf
 echo "set -g @plugin 'tmux-plugins/tmux-sensible'" >> ~/.tmux.conf
+echo "set -g @plugin 'tmux-plugins/tmux-pain-control'" >> ~/.tmux.conf
 echo "set -g @plugin 'christoomey/vim-tmux-navigator'" >> ~/.tmux.conf
 echo "run '~/.tmux/plugins/tpm/tpm'" >> ~/.tmux.conf
 
