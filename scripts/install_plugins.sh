@@ -76,3 +76,16 @@ if [[ $* == *--update-rc* ]]
 then
   cat $DIR/.syntastic >> ~/.vimrc
 fi
+
+# https://github.com/wavded/vim-stylus
+cd ~/.vim/bundle
+git clone git://github.com/wavded/vim-stylus.git
+
+# https://github.com/xuhdev/vim-latex-live-preview
+cd ~/.vim
+mkdir -p plugin
+git clone https://github.com/xuhdev/vim-latex-live-preview
+mv vim-latex-live-preview/plugin/latexlivepreview.vim plugin/
+rm -rf vim-latex-live-preview
+brew install evince
+brew cask install mactex
