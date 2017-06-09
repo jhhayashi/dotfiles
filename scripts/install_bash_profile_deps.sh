@@ -3,11 +3,11 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install yarn
+brew install tree
 
 brew install nvm
-nvm install 6
-nvm alias default 6
+nvm install 8
+nvm alias default 8
 
 # https://github.com/jimeh/git-aware-prompt
 mkdir ~/.bash
