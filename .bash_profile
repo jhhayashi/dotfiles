@@ -18,6 +18,7 @@ alias ls='ls -Gp'
 alias ping='ping -c 5'
 alias rmf='rm -Rf'
 alias copen='open -a Sublime\ Text\ 2'
+alias vs='vim -O'
 function openApp {
     /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=$1
 }
