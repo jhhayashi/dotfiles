@@ -9,6 +9,9 @@ brew install nvm
 nvm install 8
 nvm alias default 8
 
+# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+brew install reattach-to-user-namespace
+
 # https://github.com/jimeh/git-aware-prompt
 mkdir ~/.bash
 cd ~/.bash
