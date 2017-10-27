@@ -26,12 +26,12 @@ alias app=openApp
 alias fb='app http://www.messenger.com'
 alias sc='app http://www.soundcloud.com'
 
+# https://hub.github.com/
+alias git=hub
+
 # env variables
 export NODE_ENV='development'
 export EDITOR=vim
-
-# yarn
-export PATH="$PATH:`yarn global bin`"
 
 # https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
