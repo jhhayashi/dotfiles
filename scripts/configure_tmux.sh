@@ -9,7 +9,4 @@ brew install tmux
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-echo "copying tmux conf file"
-cp DIR/../.tmux.conf ~/.tmux.conf 
-
 tmux source ~/.tmux.conf

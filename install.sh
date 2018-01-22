@@ -12,6 +12,7 @@ CONFIG_FILES=(
   ".bash_profile"
   ".vimrc"
   ".tern-config"
+  ".tmux.conf"
 )
 
 if [[ $* == "--link" ]] || [[ $* == "-l" ]]
