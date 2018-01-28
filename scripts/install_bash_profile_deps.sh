@@ -1,13 +1,7 @@
-if ! [ `which brew` ]
-then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+. $DIR/maybe_install_brew.sh
 
 brew install tree
-
-brew install nvm
-nvm install 8
-nvm alias default 8
 
 # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew install reattach-to-user-namespace
