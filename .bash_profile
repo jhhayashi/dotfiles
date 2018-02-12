@@ -57,8 +57,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# PATH
-export PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
+# XCode
+if [ -d /Applications/Xcode.app/Contents/Developer/usr/bin ]
+then
+  export PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
+fi
+
+# https://docs.expo.io/versions/latest/guides/genymotion.html
+if [ -d /Applications/Genymotion.app/Contents/MacOS/tools ]
+then
+  export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools
+fi
 
 # external conf
 if [ -f ~/.kensho_bash_conf ]
