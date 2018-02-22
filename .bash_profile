@@ -26,6 +26,9 @@ alias app=openApp
 alias fb='app http://www.messenger.com'
 alias sc='app http://www.soundcloud.com'
 
+# i need to gget my keyboard fixed
+alias ggit=git
+
 # https://hub.github.com/
 alias git=hub
 
