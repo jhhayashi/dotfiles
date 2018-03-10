@@ -12,6 +12,12 @@ them and their dependencies.
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) requires the latest version of MacVim (scripted install coming soon)
   - MacVim requires xcode to be installed
 
+## Vim Goodies
+- [Markdown Preview](https://github.com/JamshedVesuna/vim-markdown-preview): When editing a markdown file, input `ctrl-p` to open a preview in browser
+
+## Troubleshooting
+- [Markdown Preview is 500ing](https://github.com/joeyespo/grip/issues/262)
+
 ## TODO
 - Documentation/links for installed programs
 - Script install of mac dependencies (xcode, macvim)
