@@ -29,20 +29,8 @@ then
   cat $DIR/.codi >> ~/.bash_profile
 fi
 
-# https://github.com/pangloss/vim-javascript
-git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
-if [[ $* == *--update-rc* ]]
-then
-  echo 'let g:javascript_plugin_flow = 1' >> ~/.vimrc
-fi
-
-# https://github.com/mxw/vim-jsx
-cd ~/.vim/bundle
-git clone https://github.com/mxw/vim-jsx.git
-if [[ $* == *--update-rc* ]]
-then
-  echo 'let g:jsx_ext_required = 0' >> ~/.vimrc
-fi
+# https://github.com/sheerun/vim-polyglot
+git clone https://github.com/sheerun/vim-polyglot ~/.vim/bundle/vim-polyglot
 
 # https://github.com/JamshedVesuna/vim-markdown-preview
 cd ~/.vim/bundle
@@ -72,10 +60,6 @@ if [[ $* == *--update-rc* ]]
 then
   cat $DIR/.syntastic >> ~/.vimrc
 fi
-
-# https://github.com/wavded/vim-stylus
-cd ~/.vim/bundle
-git clone git://github.com/wavded/vim-stylus.git
 
 # https://github.com/xuhdev/vim-latex-live-preview
 cd ~/.vim
