@@ -453,3 +453,6 @@ let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 " https://github.com/xuhdev/vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
+
+" use jenkins syntax highlighting for .jenkins files
+autocmd BufNewFile,BufRead *.jenkins set syntax=groovy
