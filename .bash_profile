@@ -73,7 +73,7 @@ then
 fi
 
 # external conf
-if [ -f ~/.kensho_bash_conf ]
+if [ -f ~/.external_bash_conf ]
 then
-  source ~/.kensho_bash_conf
+  source ~/.external_bash_conf
 fi
