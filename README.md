@@ -12,6 +12,9 @@ them and their dependencies.
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) requires the latest version of MacVim (scripted install coming soon)
   - MacVim requires xcode to be installed
 
+## Shell Goodies
+- Compile LaTeX to pdf with `pdftex [file]`
+
 ## Vim Goodies
 - [Markdown Preview](https://github.com/JamshedVesuna/vim-markdown-preview): When editing a markdown file, input `ctrl-p` to open a preview in browser
 
