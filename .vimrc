@@ -451,6 +451,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
+" https://github.com/Yggdroot/indentLine
+" toggle with :IndentLinesToggle
+let g:indentLine_enabled = 0
+
 " https://github.com/xuhdev/vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
 
