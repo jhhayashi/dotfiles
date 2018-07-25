@@ -17,6 +17,7 @@ them and their dependencies.
 
 ## Vim Goodies
 - [Markdown Preview](https://github.com/JamshedVesuna/vim-markdown-preview): When editing a markdown file, input `ctrl-p` to open a preview in browser
+- [Indentation visualization](https://github.com/Yggdroot/indentLine): To toggle, run `:IndentLinesToggle`
 
 ## Troubleshooting
 - [Markdown Preview is 500ing](https://github.com/joeyespo/grip/issues/262)
