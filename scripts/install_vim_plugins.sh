@@ -46,6 +46,10 @@ fi
 cd ~/.vim/bundle
 git clone https://github.com/jshint/jshint
 
+# https://github.com/Yggdroot/indentLine
+cd ~/.vim/bundle
+git clone https://github.com/Yggdroot/indentLine
+
 # https://github.com/christoomey/vim-tmux-navigator
 cd ~/.vim/bundle
 git clone https://github.com/christoomey/vim-tmux-navigator
