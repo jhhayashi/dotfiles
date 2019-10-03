@@ -62,6 +62,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+if [ -d ~/Library/Python/3.6/bin ]
+then
+  export PATH=$PATH:~/Library/Python/3.6/bin
+fi
+
 # XCode
 if [ -d /Applications/Xcode.app/Contents/Developer/usr/bin ]
 then
