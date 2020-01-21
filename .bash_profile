@@ -79,6 +79,12 @@ then
   export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools
 fi
 
+# git autocomplete
+if [ -f ~/.git-completion.bash ]
+then
+  source ~/.git-completion.bash
+fi
+
 # external conf
 if [ -f ~/.external_bash_conf ]
 then
