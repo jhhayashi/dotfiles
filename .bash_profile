@@ -79,6 +79,17 @@ then
   export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools
 fi
 
+# Android Studio for React Native
+# https://facebook.github.io/react-native/docs/getting-started
+if [ -d ~/Library/Android/sdk ]
+then
+  export ANDROID_HOME=~/Library/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
 # git autocomplete
 if [ -f ~/.git-completion.bash ]
 then
