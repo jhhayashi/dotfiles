@@ -458,5 +458,9 @@ let g:indentLine_enabled = 0
 " https://github.com/xuhdev/vim-latex-live-preview
 let g:livepreview_previewer = 'evince'
 
+" turn off the infuriating jsonnet autolint
+" https://github.com/google/vim-jsonnet
+let g:jsonnet_fmt_on_save = 0
+
 " use jenkins syntax highlighting for .jenkins files
 autocmd BufNewFile,BufRead *.jenkins set syntax=groovy
