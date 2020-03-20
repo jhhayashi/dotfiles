@@ -57,6 +57,18 @@ codi() {
     Codi $syntax" "$@"
 }
 
+atob() {
+  echo -n $1 | base64 -D && echo ""
+  echo -n $1 | base64 -D | pbcopy
+  echo "copied to clipboard!"
+}
+
+btoa() {
+  echo -n $1 | base64
+  echo -n $1 | base64 | tr -d \\n | pbcopy
+  echo "copied to clipboard!"
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
