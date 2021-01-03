@@ -32,9 +32,6 @@ alias ggit=git
 # git push upstream
 alias gpup='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 
-# https://hub.github.com/
-alias git=hub
-
 # env variables
 export EDITOR=vim
 
@@ -100,6 +97,12 @@ then
   export PATH=$PATH:$ANDROID_HOME/tools
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+# https://docs.brew.sh/Installation
+if [ -d /opt/homebrew/bin ]
+then
+  export PATH=/opt/homebrew/bin:$PATH
 fi
 
 # git autocomplete
