@@ -4,7 +4,7 @@ them and their dependencies.
 
 ## Installation
 - Install the dotfiles and dependencies
-  - `./install.sh` Will install and append my dotfiles to yours.
+  - `./install.sh` Will show the help menu with instructions on how to configure the script.
   - `./install.sh --link` Will overwrite your dotfiles with dotfiles linked to this repo.
 - Install the `tmux` dependencies by opening a tmux pane and doing `^b I`
 
@@ -25,6 +25,6 @@ them and their dependencies.
 ## TODO
 - Documentation/links for installed programs
 - Script install of mac dependencies (xcode, macvim)
-- Script for installing programs (macvim, nvm)
 - Script for setting mac system prefs, hostname, etc.
 - Script for setting git defaults
+- OS-based installs (e.g. don't install mac dependencies on linux or windows)
