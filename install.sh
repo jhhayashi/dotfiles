@@ -15,10 +15,10 @@ if argIncludes "--help" || argIncludes "-h" || [[ $# -eq 0 ]]; then
   echo "--append        | append these config files to any config files that already exist"
   echo "--dry-run       | check to see if any config files will be changed"
   echo "--install-only  | do nothing with config files and run install scripts"
+  echo -e "\nIf multiple flags are passed, only one will execute."
+  echo "The priority matches the order in the above help text."
   exit 0
 fi
-
-set -x
 
 CONFIG_FILES=(
   ".bash_profile"
@@ -27,8 +27,15 @@ CONFIG_FILES=(
   ".tmux.conf"
 )
 
+function removeOldConfigs() {
+  for file in "${CONFIG_FILES[@]}"
+  do
+    echo "deleting ~/$file"
+    rm ~/$file
+  done
+}
+
 if argIncludes "--dry-run"; then
-  set +x
   echo -e "\nsearching for existing config files..."
   for file in "${CONFIG_FILES[@]}"
   do
@@ -39,18 +46,20 @@ if argIncludes "--dry-run"; then
   exit 0
 elif argIncludes "--link"; then
   echo -e "\nlinking config files..."
+  removeOldConfigs
   for file in "${CONFIG_FILES[@]}"
   do
-    ln -s $DIR/$file ~/$file
+    ln -sv $DIR/$file ~/$file
   done
 elif argIncludes "--overwrite"; then
-  echo -d "\noverwriting config files..."
+  echo -e "\noverwriting config files..."
+  removeOldConfigs
   for file in "${CONFIG_FILES[@]}"
   do
-    cp $DIR/$file ~/$file
+    cp -vf $DIR/$file ~/$file
   done
 elif argIncludes "--append"; then
-  echo -d "\nappending config files..."
+  echo -e "\nappending config files..."
   for file in "${CONFIG_FILES[@]}"
   do
     cat $DIR/$file >> ~/$file
