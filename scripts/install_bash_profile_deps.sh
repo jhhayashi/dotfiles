@@ -3,9 +3,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 brew install tree
 
-# https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
-brew install reattach-to-user-namespace
-
 # https://hub.github.com/
 brew install hub
 
