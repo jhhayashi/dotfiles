@@ -3,8 +3,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 brew install tree
 
-# https://hub.github.com/
-brew install hub
+# https://github.com/cli/cli
+brew install gh
 
 # https://github.com/jimeh/git-aware-prompt
 mkdir ~/.bash
