@@ -69,8 +69,6 @@ elif ! argIncludes "--install-only"; then
   exit 1
 fi
 
-exit 10
-
 echo -e "\nrunning install scripts..."
 for script in $DIR/scripts/*
 do
