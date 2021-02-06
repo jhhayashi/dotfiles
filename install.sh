@@ -15,6 +15,7 @@ if argIncludes "--help" || argIncludes "-h" || [[ $# -eq 0 ]]; then
   echo "--append        | append these config files to any config files that already exist"
   echo "--dry-run       | check to see if any config files will be changed"
   echo "--install-only  | do nothing with config files and run install scripts"
+  echo "--skip-install  | stop after copying config files. This is recommended for non-mac installs"
   echo -e "\nIf multiple flags are passed, only one will execute."
   echo "The priority matches the order in the above help text."
   exit 0
@@ -69,8 +70,10 @@ elif ! argIncludes "--install-only"; then
   exit 1
 fi
 
-echo -e "\nrunning install scripts..."
-for script in $DIR/scripts/*
-do
-  bash $script
-done
+if ! argIncludes "--skip-install"; then
+  echo -e "\nrunning install scripts..."
+  for script in $DIR/scripts/*
+  do
+    bash $script
+  done
+fi
