@@ -7,6 +7,7 @@ them and their dependencies.
   - `./install.sh` Will show the help menu with instructions on how to configure the script.
   - `./install.sh --link` Will overwrite your dotfiles with dotfiles linked to this repo.
 - Install the `tmux` dependencies by opening a tmux pane and doing `^b I`
+- On MacOS, run the Mos app and reverse direction between mouse and trackpad
 
 ## Dependencies
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) requires the latest version of MacVim (scripted install coming soon)
