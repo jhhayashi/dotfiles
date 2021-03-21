@@ -1,7 +1,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/maybe_install_brew.sh
 
-sudo xcode-select --install
+xcode-select --install
 sudo xcodebuild -license accept
 
 brew install macvim
