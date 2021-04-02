@@ -26,11 +26,34 @@ alias app=openApp
 alias fb='app http://www.messenger.com'
 alias sc='app http://www.soundcloud.com'
 
+##################################
+# git
+##################################
 # i need to gget my keyboard fixed
 alias ggit=git
 
 # git push upstream
 alias gpup='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+alias gitrev='git rev-parse --short HEAD'
+
+prune-branches () {
+  BRANCHES="$(git fetch --prune --dry-run 2>&1 | grep jhh/ | sed -E 's/.*origin\/(jhh\/.+)/\1/')"
+  echo "branches to delete:"
+  echo $BRANCHES
+  read -p "Are you sure? " -n 1 -r
+  echo ''
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    echo ''
+    echo "deleting local branches..."
+    git branch -D $BRANCHES
+    echo ''
+    echo "pruning remote branches..."
+    git fetch --prune
+  fi
+}
+
+##################################
 
 # env variables
 export EDITOR=vim
@@ -66,6 +89,15 @@ btoa() {
   echo "copied to clipboard!"
 }
 
+# generate random pw
+newpw() {
+  length=${1:-18}
+  pw="$(openssl rand -base64 $length | tr -d \\n)"
+  echo $pw | tr -d \\n | pbcopy
+  echo $pw
+  echo "copied to clipboard!"
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
@@ -75,6 +107,14 @@ if [ -d ~/Library/Python/3.6/bin ]
 then
   export PATH=$PATH:~/Library/Python/3.6/bin
 fi
+
+# pyenv: https://github.com/pyenv/pyenv#installation
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# poetry, installed from https://github.com/python-poetry/poetry#installation
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # XCode
 if [ -d /Applications/Xcode.app/Contents/Developer/usr/bin ]
