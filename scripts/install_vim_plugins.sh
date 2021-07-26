@@ -71,4 +71,4 @@ git clone https://github.com/xuhdev/vim-latex-live-preview
 mv vim-latex-live-preview/plugin/latexlivepreview.vim plugin/
 rm -rf vim-latex-live-preview
 brew install evince
-brew cask install mactex
+brew install --cask mactex
