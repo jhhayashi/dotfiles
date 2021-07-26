@@ -31,8 +31,10 @@ CONFIG_FILES=(
 function removeOldConfigs() {
   for file in "${CONFIG_FILES[@]}"
   do
-    echo "deleting ~/$file"
-    rm ~/$file
+    if [[ -e ~/$file ]]; then
+      echo "deleting ~/$file"
+      rm ~/$file
+    fi
   done
 }
 
