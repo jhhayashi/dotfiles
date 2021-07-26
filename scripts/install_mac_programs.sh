@@ -16,3 +16,4 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # allow us to run nvm
 source ~/.nvm/nvm.sh
 nvm install --lts
+nvm alias default 'lts/*'
