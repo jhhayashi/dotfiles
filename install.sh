@@ -38,6 +38,8 @@ function removeOldConfigs() {
   done
 }
 
+
+# handle config files
 if argIncludes "--dry-run"; then
   echo -e "\nsearching for existing config files..."
   for file in "${CONFIG_FILES[@]}"
@@ -72,6 +74,8 @@ elif ! argIncludes "--install-only"; then
   exit 1
 fi
 
+
+# run every script in the scripts dir
 if ! argIncludes "--skip-install"; then
   echo -e "\nrunning install scripts..."
   for script in $DIR/scripts/*
