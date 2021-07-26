@@ -5,6 +5,8 @@ echo "installing and configuring tmux..."
 
 brew install tmux
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 tmux source ~/.tmux.conf
