@@ -6,6 +6,9 @@ brew install tree
 # https://github.com/cli/cli
 brew install gh
 
+# git autocomplete
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
+
 # https://github.com/jimeh/git-aware-prompt
 mkdir ~/.bash
 cd ~/.bash
