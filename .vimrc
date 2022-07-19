@@ -418,6 +418,10 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Customization
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " pathogen
 execute pathogen#infect()
 
@@ -464,3 +468,6 @@ let g:jsonnet_fmt_on_save = 0
 
 " use jenkins syntax highlighting for .jenkins files
 autocmd BufNewFile,BufRead *.jenkins set syntax=groovy
+
+" since I allow case-insensitive filename completion in my shell, allow in vim too
+set wildignorecase
