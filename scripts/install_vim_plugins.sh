@@ -56,14 +56,6 @@ git clone https://github.com/christoomey/vim-tmux-navigator
 cd ~/.vim/bundle
 git clone git://github.com/digitaltoad/vim-pug.git
 
-# https://github.com/vim-syntastic/syntastic
-cd ~/.vim/bundle && \
-git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-if [[ $* == *--update-rc* ]]
-then
-  cat $DIR/.syntastic >> ~/.vimrc
-fi
-
 # https://github.com/xuhdev/vim-latex-live-preview
 cd ~/.vim
 mkdir -p plugin
