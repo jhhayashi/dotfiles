@@ -141,11 +141,6 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
-try
-    colorscheme desert
-catch
-endtry
-
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -460,3 +455,15 @@ autocmd BufNewFile,BufRead *.jenkins set syntax=groovy
 
 " since I allow case-insensitive filename completion in my shell, allow in vim too
 set wildignorecase
+
+" ALE
+" let g:ale_linters = {'javascript': ['eslint'], 'typescriptreact': ['eslint'],}
+let g:ale_fixers = {'javascript': ['eslint'], 'typescriptreact': ['eslint'],}
+let g:ale_fix_on_save = 1
+
+"molokai
+try
+    colorscheme molokai
+catch
+endtry
+let g:molokai_original = 1

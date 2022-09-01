@@ -59,6 +59,11 @@ git clone git://github.com/digitaltoad/vim-pug.git
 # https://github.com/dense-analysis/ale
 git clone https://github.com/dense-analysis/ale.git ~/.vim/bundle/ale
 
+# https://github.com/tomasr/molokai
+git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
+mkdir -p ~/.vim/colors
+cp ~/.vim/bundle/molokai/colors/molokai.vim ~/.vim/colors/
+
 # https://github.com/xuhdev/vim-latex-live-preview
 cd ~/.vim
 mkdir -p plugin
