@@ -420,16 +420,9 @@ endfunction
 " pathogen
 execute pathogen#infect()
 
-" enable syntax highlighting with Flow
-" https://github.com/pangloss/vim-javascript
-let g:javascript_plugin_flow = 1
-
 " allow jsx syntax highlighting for .js files
 " https://github.com/mxw/vim-jsx
 let g:jsx_ext_required = 0
-
-" https://github.com/flowtype/vim-flow
-let g:flow#errjmp = 1
 
 " Use grip for markdown preview
 " https://github.com/JamshedVesuna/vim-markdown-preview
@@ -458,12 +451,12 @@ set wildignorecase
 
 " ALE
 " let g:ale_linters = {'javascript': ['eslint'], 'typescriptreact': ['eslint'],}
-let g:ale_fixers = {'javascript': ['eslint'], 'typescriptreact': ['eslint'],}
+let g:ale_fixers = {'javascript': ['eslint'], 'typescriptreact': ['eslint'], 'typescript': ['eslint'], }
 let g:ale_fix_on_save = 1
 
 "molokai
+let g:molokai_original = 1
 try
     colorscheme molokai
 catch
 endtry
-let g:molokai_original = 1
