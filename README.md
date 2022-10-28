@@ -3,6 +3,9 @@ This repo contains all my dotfiles, along with an installation script to install
 them and their dependencies.
 
 ## Installation
+- There's currently a bug in installing homebrew, where the `brew` command isn't
+  available after the installation script. To get around this, run
+  `./scripts/maybe_install_brew.sh` before running the installation script below
 - Install the dotfiles and dependencies
   - `./install.sh` Will show the help menu with instructions on how to configure the script.
   - `./install.sh --link` Will overwrite your dotfiles with dotfiles linked to this repo.
