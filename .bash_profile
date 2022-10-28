@@ -145,6 +145,9 @@ then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
+# set default shell
+export SHELL=/bin/bash
+
 # git autocomplete
 if [ -f ~/.git-completion.bash ]
 then
