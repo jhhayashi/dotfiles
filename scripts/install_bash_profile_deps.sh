@@ -12,7 +12,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 # https://github.com/jimeh/git-aware-prompt
 mkdir ~/.bash
 cd ~/.bash
-git clone git://github.com/jimeh/git-aware-prompt.git
+git clone https://github.com/jimeh/git-aware-prompt.git
 
 # https://github.com/metakirby5/codi.vim
 mkdir -p ~/.vim/bundle

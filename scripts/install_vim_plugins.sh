@@ -54,7 +54,7 @@ cd ~/.vim/bundle
 git clone https://github.com/christoomey/vim-tmux-navigator
 
 cd ~/.vim/bundle
-git clone git://github.com/digitaltoad/vim-pug.git
+git clone https://github.com/digitaltoad/vim-pug.git
 
 # https://github.com/dense-analysis/ale
 git clone https://github.com/dense-analysis/ale.git ~/.vim/bundle/ale
