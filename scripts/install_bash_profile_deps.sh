@@ -2,6 +2,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DIR/maybe_install_brew.sh
 
 brew install tree
+brew install jq
 
 # https://github.com/cli/cli
 brew install gh
