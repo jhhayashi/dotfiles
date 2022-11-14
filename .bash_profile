@@ -98,6 +98,26 @@ newpw() {
   echo "copied to clipboard!"
 }
 
+# https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
+compress_images() {
+  input_path=$1
+  output_path=${2:-compressed}
+
+  if [ "$#" -eq 0 ]; then
+    echo "usage: compress_images input_path <output_path | \"compressed\">"
+    echo "example: compress_images '*.png' output-path"
+    return 1
+  fi
+
+  mkdir -p $output_path
+
+  mogrify -path $output_path -filter Triangle -define filter:support=2 \
+    -unsharp 0.25x0.25+8+0.065 -dither None -posterize 136 -quality 82 \
+    -define png:compression-level=9 -define png:compression-strategy=1 \
+    -define png:exclude-chunk=all -interlace none -colorspace sRGB \
+    -strip $input_path
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
