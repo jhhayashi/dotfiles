@@ -131,6 +131,11 @@ fi
 # pyenv: https://github.com/pyenv/pyenv#installation
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+
+  # https://github.com/pyenv/pyenv-virtualenv
+  if [[ "$(which pyenv-virtualenv)" =~ "pyenv-virtualenv" ]]; then
+    eval "$(pyenv virtualenv-init -)"
+  fi
 fi
 
 # poetry, installed from https://github.com/python-poetry/poetry#installation

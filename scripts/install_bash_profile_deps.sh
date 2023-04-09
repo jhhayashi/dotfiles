@@ -18,3 +18,6 @@ git clone https://github.com/jimeh/git-aware-prompt.git
 # https://github.com/metakirby5/codi.vim
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle && git clone https://github.com/metakirby5/codi.vim
+
+# https://github.com/pyenv/pyenv-virtualenv
+brew install pyenv pyenv-virtualenv
