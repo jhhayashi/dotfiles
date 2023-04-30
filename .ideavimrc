@@ -1,1 +1,5 @@
+# jk ins addition to esc for exiting edit mode
 inoremap jk <Esc>
+
+# case insensitive search
+set ignorecase
