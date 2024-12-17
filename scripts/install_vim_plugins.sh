@@ -64,6 +64,9 @@ git clone https://github.com/tomasr/molokai ~/.vim/bundle/molokai
 mkdir -p ~/.vim/colors
 cp ~/.vim/bundle/molokai/colors/molokai.vim ~/.vim/colors/
 
+# https://github.com/github/copilot.vim
+git clone https://github.com/github/copilot.vim ~/.vim/bundle/copilot.vim
+
 # https://github.com/xuhdev/vim-latex-live-preview
 cd ~/.vim
 mkdir -p plugin

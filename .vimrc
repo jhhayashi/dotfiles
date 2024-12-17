@@ -460,3 +460,9 @@ try
     colorscheme molokai
 catch
 endtry
+
+" Github Copilot: https://github.com/github/copilot.vim
+let g:copilot_no_tab_map = v:true
+let g:copilot_assume_mapped = v:true
+let g:copilot_filetypes = {'*': v:false, 'javascript': v:true, 'typescript': v:true, 'python': v:true, 'yaml': v:true, 'terraform': v:true }
+imap <silent><script><expr> <C-d> copilot#Accept("\<CR>")
