@@ -35,6 +35,9 @@ alias ggit=git
 # git push upstream
 alias gpup='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gitrev='git rev-parse --short HEAD'
+function gcm() {
+    git commit -m $*
+}
 
 prune-branches () {
   BRANCHES="$(git fetch --prune --dry-run 2>&1 | grep jhh/ | sed -E 's/.*origin\/(jhh\/.+)/\1/')"
@@ -75,6 +78,11 @@ codi() {
     hi VertSplit ctermbg=NONE |\
     hi NonText ctermfg=0 |\
     Codi $syntax" "$@"
+}
+
+# remove formatting of whatever is in the clipboard
+txt() {
+  pbpaste | pbcopy
 }
 
 atob() {
@@ -118,6 +126,36 @@ compress_images() {
     -strip $input_path
 }
 
+resize_image() {
+  input_path=$1
+  size=$2
+  # output_path=${2:-resized}
+
+  if [ "$#" -eq 0 ]; then
+    echo "usage: resize_image input_path <size>"
+    echo "example: resize_image my-image.png 50%"
+    echo "example: resize_image my-image.png 100x100"
+    return 1
+  fi
+
+  # copy the file first so we don't mutate/overwrite it
+  mkdir -p resized
+  cp $input_path resized/$input_path
+
+  mogrify -resize $size resized/$input_path 
+}
+
+
+post() {
+  if [ "$#" -ne 2 ] || ! [[ "$1" == http* ]]; then
+    echo "usage: post <url> <json>"
+    echo 'example: post https://google.com {"foo": "bar"}'
+    return 1
+  fi
+
+  curl "$1" --header "Content-Type: application/json" --request POST --data "$2"
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
@@ -147,22 +185,19 @@ then
   export PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
 fi
 
-# https://docs.expo.io/versions/latest/guides/genymotion.html
-if [ -d /Applications/Genymotion.app/Contents/MacOS/tools ]
-then
-  export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools
-fi
-
 # Android Studio for React Native
-# https://facebook.github.io/react-native/docs/getting-started
+# https://docs.expo.dev/workflow/android-studio-emulator/
+if [ -d /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home ]
+then
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+fi
 if [ -d ~/Library/Android/sdk ]
 then
   export ANDROID_HOME=~/Library/Android/sdk
   export PATH=$PATH:$ANDROID_HOME/emulator
-  export PATH=$PATH:$ANDROID_HOME/tools
-  export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/platform-tools
 fi
+
 
 # https://docs.brew.sh/Installation
 if [ -d /opt/homebrew/bin ]
