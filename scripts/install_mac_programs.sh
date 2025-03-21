@@ -11,6 +11,10 @@ brew link macvim
 # Application that allows different settings for scroll direction on mouse and trackpad
 brew install --cask mos
 
+# clipboard manager
+# https://github.com/p0deje/Maccy
+brew install maccy
+
 # https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # allow us to run nvm
