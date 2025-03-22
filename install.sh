@@ -25,7 +25,6 @@ CONFIG_FILES=(
   ".bash_profile"
   ".vimrc"
   ".ideavimrc"
-  ".tern-config"
   ".tmux.conf"
 )
 

@@ -424,20 +424,12 @@ execute pathogen#infect()
 " https://github.com/mxw/vim-jsx
 let g:jsx_ext_required = 0
 
-" Use grip for markdown preview
-" https://github.com/JamshedVesuna/vim-markdown-preview
-let vim_markdown_preview_github=1
-let vim_markdown_preview_browser='Google Chrome'
-
 " my computer has no esc key
 :imap jk <Esc>
 
 " https://github.com/Yggdroot/indentLine
 " toggle with :IndentLinesToggle
 let g:indentLine_enabled = 0
-
-" https://github.com/xuhdev/vim-latex-live-preview
-let g:livepreview_previewer = 'evince'
 
 " turn off the infuriating jsonnet autolint
 " https://github.com/google/vim-jsonnet
@@ -453,13 +445,6 @@ set wildignorecase
 " let g:ale_linters = {'javascript': ['eslint'], 'typescriptreact': ['eslint'],}
 let g:ale_fixers = {'javascript': ['eslint'], 'typescriptreact': ['eslint'], 'typescript': ['eslint'], }
 let g:ale_fix_on_save = 1
-
-"molokai
-let g:molokai_original = 1
-try
-    colorscheme molokai
-catch
-endtry
 
 " Github Copilot: https://github.com/github/copilot.vim
 let g:copilot_no_tab_map = v:true

@@ -11,6 +11,8 @@ brew install gh
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
 
 # https://github.com/jimeh/git-aware-prompt
-mkdir ~/.bash
+mkdir -p ~/.bash
 cd ~/.bash
-git clone https://github.com/jimeh/git-aware-prompt.git
+if [ ! -d "git-aware-prompt" ]; then
+    git clone https://github.com/jimeh/git-aware-prompt.git
+fi

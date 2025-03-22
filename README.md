@@ -20,7 +20,6 @@ them and their dependencies.
 - Compile LaTeX to pdf with `pdftex [file]`
 
 ## Vim Goodies
-- [Markdown Preview](https://github.com/JamshedVesuna/vim-markdown-preview): When editing a markdown file, input `ctrl-p` to open a preview in browser
 - [Indentation visualization](https://github.com/Yggdroot/indentLine): To toggle, run `:IndentLinesToggle`
 
 ## Troubleshooting
