@@ -7,6 +7,7 @@ them and their dependencies.
   available after the installation script. To get around this, run
   `./scripts/maybe_install_brew.sh` before running the installation script below
 - Install the dotfiles and dependencies
+  - Set `GIT_USER_NAME` and `GIT_USER_EMAIL` to configure the git user settings
   - `./install.sh` Will show the help menu with instructions on how to configure the script.
   - `./install.sh --link` Will overwrite your dotfiles with dotfiles linked to this repo.
 - Install the `tmux` dependencies by opening a tmux pane and doing `^b I`
