@@ -219,3 +219,5 @@ if [ -f ~/.external_bash_conf ]
 then
   source ~/.external_bash_conf
 fi
+
+. "$HOME/.local/bin/env"
