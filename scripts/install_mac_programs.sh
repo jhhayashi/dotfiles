@@ -15,6 +15,10 @@ brew install --cask mos
 # https://github.com/p0deje/Maccy
 brew install maccy
 
+# display resolution utility
+# https://github.com/waydabber/BetterDisplay
+brew install --cask betterdisplay
+
 # https://github.com/nvm-sh/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 # allow us to run nvm
