@@ -106,6 +106,19 @@ newpw() {
   echo "copied to clipboard!"
 }
 
+compress_video() {
+  in="$1"
+  out="${2:-${1%.*}_compressed.mp4}"
+  ffmpeg -y -hide_banner -loglevel error \
+    -i "$in" \
+    -map 0:v:0 -map 0:a:0? \
+    -c:v libx264 -crf 23 -preset medium -tune film \
+    -vf "scale=1920:1080:force_original_aspect_ratio=decrease,format=yuv420p" \
+    -c:a aac -b:a 128k \
+    -movflags +faststart \
+    "$out"
+}
+
 # https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
 compress_images() {
   input_path=$1
@@ -142,7 +155,7 @@ resize_image() {
   mkdir -p resized
   cp $input_path resized/$input_path
 
-  mogrify -resize $size resized/$input_path 
+  mogrify -resize $size resized/$input_path
 }
 
 
@@ -158,7 +171,7 @@ post() {
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 if [ -d ~/Library/Python/3.6/bin ]
