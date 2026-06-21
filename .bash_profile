@@ -38,6 +38,12 @@ alias gitrev='git rev-parse --short HEAD'
 function gcm() {
     git commit -m $*
 }
+function co() {
+  gh pr checkout $*
+}
+alias merge='gh pr merge -d'
+alias prv='gh pr view -w'
+
 
 prune-branches () {
   BRANCHES="$(git fetch --prune --dry-run 2>&1 | grep jhh/ | sed -E 's/.*origin\/(jhh\/.+)/\1/')"
@@ -234,3 +240,10 @@ then
 fi
 
 . "$HOME/.local/bin/env"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# claude
+alias c='CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --dangerously-skip-permissions'
